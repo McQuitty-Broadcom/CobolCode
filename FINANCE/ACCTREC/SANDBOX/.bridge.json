@@ -1,0 +1,15 @@
+{
+  "elements" : { },
+  "defaultProcessorGroup" : "SANDBOX",
+  "definedProcessorGroups" : [ {
+    "name" : "DFCSAND",
+    "description" : "SANDBOX PROCESSOR GROUP USING DFC"
+  }, {
+    "name" : "DYNAMBOX",
+    "description" : "SANDBOX PROCESSOR GROUP"
+  }, {
+    "name" : "SANDBOX",
+    "description" : "SANDBOX PROCESSOR GROUP"
+  } ],
+  "fileExtension" : ""
+}

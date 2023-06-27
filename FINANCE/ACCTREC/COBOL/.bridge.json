@@ -1,0 +1,37 @@
+{
+  "elements" : {
+    "DAMARP01" : {
+      "processorGroup" : "CLENBL"
+    },
+    "SNOW" : {
+      "processorGroup" : "CLENBL"
+    }
+  },
+  "defaultProcessorGroup" : "CLENBL",
+  "definedProcessorGroups" : [ {
+    "name" : "*NOPROC*",
+    "description" : "NO PROCESSORS ASSIGNED"
+  }, {
+    "name" : "CIINBL",
+    "description" : "COBOL II COMPILE AND LINK, LISTING IS STORED"
+  }, {
+    "name" : "CIINBLX",
+    "description" : "COBOL II COMP AND LINK, W/PROTSYM LISTING STORED"
+  }, {
+    "name" : "CLECICS",
+    "description" : "CICS COBOL"
+  }, {
+    "name" : "CLENBL",
+    "description" : "COBOL/LE COMPILE AND LINK, LISTING IS STORED"
+  }, {
+    "name" : "CLENBLX",
+    "description" : "COBOL/LE COMPILE AND LINK, LISTING W/INTERTEST"
+  }, {
+    "name" : "LEMC2",
+    "description" : "COBOL COMPILE AND LINK"
+  }, {
+    "name" : "X",
+    "description" : "dummy"
+  } ],
+  "fileExtension" : "cbl"
+}
