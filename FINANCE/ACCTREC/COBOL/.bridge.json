@@ -27,8 +27,14 @@
     "name" : "CLENBLX",
     "description" : "COBOL/LE COMPILE AND LINK, LISTING W/INTERTEST"
   }, {
+    "name" : "LEMC0",
+    "description" : "Try to comp cobol+cics"
+  }, {
     "name" : "LEMC2",
     "description" : "COBOL COMPILE AND LINK"
+  }, {
+    "name" : "LEMCX",
+    "description" : "Try to compile cobol cics pgm"
   }, {
     "name" : "X",
     "description" : "dummy"
