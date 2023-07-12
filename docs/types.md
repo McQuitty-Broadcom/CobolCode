@@ -19,7 +19,6 @@
 |  | CLECICS | CICS COBOL |  
 |  | CLENBL __`(Default)`__ | COBOL/LE COMPILE AND LINK, LISTING IS STORED |  
 |  | CLENBLX | COBOL/LE COMPILE AND LINK, LISTING W/INTERTEST |  
-|  | LEMC0 | Try to comp cobol+cics |  
 |  | LEMC2 | COBOL COMPILE AND LINK |  
 |  | LEMCX | Try to compile cobol cics pgm |  
 |  | X | dummy |  
