@@ -1,5 +1,9 @@
 {
-  "elements" : { },
+  "elements" : {
+    "TDEMO" : {
+      "processorGroup" : "SANDBOX"
+    }
+  },
   "defaultProcessorGroup" : "SANDBOX",
   "definedProcessorGroups" : [ {
     "name" : "DFCSAND",
