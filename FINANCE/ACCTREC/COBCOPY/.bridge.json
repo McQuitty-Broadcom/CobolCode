@@ -1,5 +1,9 @@
 {
-  "elements" : { },
+  "elements" : {
+    "FARINCL" : {
+      "processorGroup" : "*NOPROC*"
+    }
+  },
   "defaultProcessorGroup" : "*NOPROC*",
   "definedProcessorGroups" : [ {
     "name" : "*NOPROC*",
