@@ -1,5 +1,8 @@
 {
   "elements" : {
+    "BERBE02" : {
+      "processorGroup" : "SANDBOX"
+    },
     "TDEMO" : {
       "processorGroup" : "SANDBOX"
     }
