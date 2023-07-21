@@ -1,5 +1,8 @@
 {
   "elements" : {
+    "ARADEMO" : {
+      "processorGroup" : "CLENBL"
+    },
     "DAMARP01" : {
       "processorGroup" : "CLECICS"
     },
