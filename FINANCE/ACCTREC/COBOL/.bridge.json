@@ -3,6 +3,9 @@
     "DAMARP01" : {
       "processorGroup" : "CLENBL"
     },
+    "MCQTH01A" : {
+      "processorGroup" : "CLENBL"
+    },
     "SNOW" : {
       "processorGroup" : "CLENBL"
     }
