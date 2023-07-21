@@ -1,7 +1,7 @@
 {
   "elements" : {
     "DAMARP01" : {
-      "processorGroup" : "CLENBL"
+      "processorGroup" : "CLECICS"
     },
     "MCQTH01A" : {
       "processorGroup" : "CLENBL"
