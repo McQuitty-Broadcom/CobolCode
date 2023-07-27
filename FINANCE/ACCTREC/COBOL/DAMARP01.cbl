@@ -1,5 +1,5 @@
 000100 IDENTIFICATION DIVISION.                                                 
-       PROGRAM-ID. FINAPP01.                                                    
+       PROGRAM-ID. FINdPP01.                                                    
 000300 ENVIRONMENT DIVISION.                                                    
        INPUT-OUTPUT SECTION.                                                    
 000500 FILE-CONTROL.                                                            
