@@ -1,5 +1,5 @@
 000100 IDENTIFICATION DIVISION.                                                 
-       PROGRAM-ID. B1.                                                    
+       PROGRAM-ID. B2.                                                    
 000300 ENVIRONMENT DIVISION.                                                    
        INPUT-OUTPUT SECTION.                                                    
 000500 FILE-CONTROL.                                                            
