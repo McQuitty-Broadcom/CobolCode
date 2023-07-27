@@ -27,7 +27,7 @@
            02 INPUT-FIELD5           PIC 9(6).                                  
            02 INPUT-FIELD6           PIC X(6).                                  
            02 FILLER                 PIC X(24).                                 
-      ******************************************************************        
+      *****************************************************************        
        WORKING-STORAGE SECTION.                                                 
        COPY HEADER1.                                                            
        01  PROGRAM-WORK-FIELDS.                                                 
