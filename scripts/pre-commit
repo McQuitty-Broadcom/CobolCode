@@ -1,0 +1,76 @@
+#!/c/Python311/python
+import subprocess
+import sys
+import os
+import json
+
+HLQ="mcqth01"
+
+def read_mapping():
+    with open(".ebg/mapping.json") as f:
+        mapping = json.load(f)
+    return mapping
+
+def zowe_execute(cmd):
+    cmd_output = subprocess.run(cmd, capture_output=True, text=True)
+    json_output = json.loads(cmd_output.stdout)
+    if cmd_output.returncode > 0:
+        print(f"Command Failed: {cmd}\nCommand Output: {cmd_output.stdout}\n{cmd_output.stderr}")
+        sys.exit(cmd_output.returncode)
+    elif json_output["data"]["returnCode"] > 0:
+        print(f"Zowe Command Error: {cmd}\nCommand Outputb: \nug")
+        sys.exit(json_output["data"]["returnCode"])
+    else:
+        return cmd_output.stdout
+
+def execute(cmd):
+    cmd_output = subprocess.run(cmd, capture_output=True, text=True)
+    if cmd_output.returncode > 0:
+        print(f"Command Failed: {cmd}\nCommand Output: {cmd_output.stderr}")
+        sys.exit(cmd_output.returncode)
+    else:
+        return cmd_output.stdout
+
+def parse_dataset(path):
+    filename = path.rsplit("/",1)[1].split(".")[0]
+    dsn = file.rsplit("/",1)[0].replace("/",".")
+    return dsn, filename
+
+def get_branch():
+    return execute("git branch --show-current").replace("* ", "").replace("\n","").strip()
+
+def diff_changed_files():
+    diff_list = execute("git diff --name-only --cached")
+    files = diff_list.split("\n")
+    files.remove("")
+    return files
+
+def checkout_file(file, type):
+    mapping = read_mapping()
+    mapped_branches = mapping['branches']
+    env = list(filter(lambda branches: branches["name"] == branch, mapped_branches))
+    if not env:
+        print("Branch not Mapped")
+        sys.exit(1)
+    environment = env[0]['environment']
+    stageNumber = env[0]['stageNumber']
+    system = env[0]['systems'][0]['name']
+    subsystem = env[0]['systems'][0]['subsystems'][0]['name']
+    signout_cmd = f"zowe.cmd endevor ret element {file} --env {environment} --sys {system} --sub {subsystem} --sn {stageNumber} --type {type} --signout --rfj"
+    zowe_execute(signout_cmd)
+    print(f"{file} checked out")
+
+branch = get_branch()
+print("Git branch:", branch)
+
+#
+# Run add command for each item changed
+for file in diff_changed_files():
+    dsn, fn = parse_dataset(file)
+    dsname = f'"{HLQ}.{branch}.{dsn}({fn})"'
+
+    checkout_file(fn, dsn.rsplit(".", 1)[1])
+    execute(f'zowe files upload file-to-data-set {file} {dsname}')
+    print(f"Updated: {dsname}")
+
+sys.exit(0)
