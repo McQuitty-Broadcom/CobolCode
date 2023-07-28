@@ -1,5 +1,5 @@
 000100 IDENTIFICATION DIVISION.                                         00000100
-000200 PROGRAM-ID. GIT.                                                 00000200
+000200 PROGRAM-ID. dasd.                                                00000200
 000300 AUTHOR. TEST.                                                         
 000400 ENVIRONMENT DIVISION.                                            00000400
 000500 INPUT-OUTPUT SECTION.                                            00000500
