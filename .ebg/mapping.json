@@ -31,5 +31,25 @@
     } ],
     "workEnvironmentOnly" : true,
     "readOnly" : false
+  },
+  {
+    "name" : "qa",
+    "environment" : "qa",
+    "stageNumber" : 1,
+    "systems" : [ {
+      "name" : "FINANCE",
+      "alias" : null,
+      "subsystems" : [ {
+        "name" : "ACCTREC",
+        "alias" : null,
+        "filter" : {
+          "elements" : [ ],
+          "types" : [ ]
+        }
+      } ],
+      "filter" : null
+    } ],
+    "workEnvironmentOnly" : true,
+    "readOnly" : false
   } ]
 }
