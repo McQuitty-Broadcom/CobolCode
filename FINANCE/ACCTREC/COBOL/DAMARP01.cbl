@@ -1,5 +1,5 @@
 000100 IDENTIFICATION DIVISION.                                                 
-       PROGRAM-ID. GIT.                                                    
+       PROGRAM-ID. MASD.                                                    
 000300 ENVIRONMENT DIVISION.                                                    
        INPUT-OUTPUT SECTION.                                                    
 000500 FILE-CONTROL.                                                            
