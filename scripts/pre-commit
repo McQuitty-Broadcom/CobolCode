@@ -1,7 +1,6 @@
 #!/c/Python311/python
 import subprocess
 import sys
-import os
 import json
 
 HLQ="mcqth01"
@@ -18,7 +17,7 @@ def zowe_execute(cmd):
         print(f"Command Failed: {cmd}\nCommand Output: {cmd_output.stdout}\n{cmd_output.stderr}")
         sys.exit(cmd_output.returncode)
     elif json_output["data"]["returnCode"] > 0:
-        print(f"Zowe Command Error: {cmd}\nCommand Outputb: \nug")
+        print(f"Zowe Command Error: {cmd}\nCommand Output:\n{cmd_output.stdout}\n{cmd_output.stderr}")
         sys.exit(json_output["data"]["returnCode"])
     else:
         return cmd_output.stdout
@@ -32,7 +31,9 @@ def execute(cmd):
         return cmd_output.stdout
 
 def parse_dataset(path):
+    # gets the filename and strips the extension
     filename = path.rsplit("/",1)[1].split(".")[0]
+    # gets the folder structure and replaces / with .
     dsn = file.rsplit("/",1)[0].replace("/",".")
     return dsn, filename
 
@@ -71,6 +72,6 @@ for file in diff_changed_files():
 
     checkout_file(fn, dsn.rsplit(".", 1)[1])
     execute(f'zowe files upload file-to-data-set {file} {dsname}')
-    print(f"Updated: {dsname}")
+    print(f"Updated Dataset: {dsname.upper()}")
 
 sys.exit(0)
