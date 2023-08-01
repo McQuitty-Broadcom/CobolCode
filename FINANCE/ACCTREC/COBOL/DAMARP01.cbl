@@ -1,5 +1,5 @@
 000100 IDENTIFICATION DIVISION.                                                 
-       PROGRAM-ID. DMARP01.                                                    
+       PROGRAM-ID. DMARP1.                                                    
 000300 ENVIRONMENT DIVISION.                                                    
        INPUT-OUTPUT SECTION.                                                    
 000500 FILE-CONTROL.                                                            
